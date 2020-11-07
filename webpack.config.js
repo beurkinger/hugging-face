@@ -2,12 +2,12 @@ const Webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const HTML_TITLE = 'Preact Starter Kit';
-const HTML_META_TITLE = 'Preact Starter Kit';
+const HTML_TITLE = 'Hugging Face';
+const HTML_META_TITLE = 'Hugging Face';
 const HTML_META_DESCRIPTION =
-  'Some boilerplate code to kickstart Preact-based projects.';
+  'A design prototype for Hugging Face.';
 const PUBLIC_PATH = {
-  PROD: '/preact-starter-kit/',
+  PROD: '/hugging-face/',
   DEV: '/',
 };
 

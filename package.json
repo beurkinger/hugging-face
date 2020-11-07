@@ -1,7 +1,7 @@
 {
-  "name": "preact-starter-kit",
+  "name": "hugging-face",
   "version": "0.0.1",
-  "description": "Some boilerplate code to kickstart Preact-based projects.",
+  "description": "A design prototype for Hugging Face.",
   "main": "index.html",
   "scripts": {
     "build": "webpack --mode production",
@@ -13,26 +13,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/beurkinger/preact-starter-kit.git"
+    "url": "git+https://github.com/beurkinger/hugging-face.git"
   },
   "keywords": [
-    "preact",
-    "boilerplate",
+    "html5",
+    "css3",
     "javascript",
     "typescript",
-    "webpack",
-    "eslint",
-    "prettier",
-    "post-css",
-    "html5",
-    "css3"
+    "design",
+    "hugging face"
   ],
   "author": "Thibault Goehringer",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/beurkinger/preact-starter-kit/issues"
+    "url": "https://github.com/beurkinger/hugging-face/issues"
   },
-  "homepage": "https://github.com/beurkinger/preact-starter-kit#readme",
+  "homepage": "https://github.com/beurkinger/hugging-face#readme",
   "dependencies": {
     "preact": "^10.4.4"
   },
