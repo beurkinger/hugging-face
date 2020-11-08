@@ -18,14 +18,16 @@
       <div class="page-header-content">
         <div class="page-header-content-column">
           <img class="page-header-logo" src="./assets/huggingface_logo.svg" alt="The Hugging Face company logo" />
-          <h2 class="page-header-title">HuggingFace</h2>
-          <a class="page-header-link" href="#">Model</a>
-          <a class="page-header-link" href="#">Explore</a>
-          <a class="page-header-link" href="#">Help</a>
-          <a class="page-header-link" href="#">Prices</a>
+          <h3 class="page-header-title">HuggingFace</h3>
+          <nav class="page-header-links">
+            <a class="button-header" href="#">Model</a>
+            <a class="button-header-menu" href="#">Explore</a>
+            <a class="button-header-menu" href="#">Help</a>
+            <a class="button-header" href="#">Prices</a>
+          </nav>
         </div>
         <div class="page-header-content-column">
-          <input type="text" class="search" placeholder="Search models, datasets, users..." />
+          <input type="text" class="input-search" placeholder="Search models, datasets, users..." />
           <button class="button">Sign In</button>
         </div>
 
@@ -57,6 +59,7 @@
     </div>
     <div class="profile-body">
       <div class="profile-body-panel">
+        <div class="button-add">+ Request To Join</div>
         <div class="panel-item">
           <h4 class="panel-item-title">
             Research Interests
@@ -71,7 +74,8 @@
             <div class="count">20</div>
           </h4>
           <div class="panel-item-body">
-            <img src="assets/team_members.png" style="width: 15.625rem; margin-top: 0.15rem" alt="Placeholder for the team member's profile pictures" />
+            <img src="assets/team_members.png" style="width: 15.625rem; margin-top: 0.15rem"
+              alt="Placeholder for the team member's profile pictures" />
           </div>
         </div>
         <div class="panel-item">
@@ -79,7 +83,7 @@
             Most Used Tags
           </h4>
           <div class="panel-item-body">
-            <div class="panel-tags">
+            <div class="tag-list">
               <div class="tag">
                 pytorch
               </div>
@@ -103,19 +107,165 @@
             Available Languages
           </h4>
           <div class="panel-item-body">
-            <div class="panel-tags">
+            <div class="tag-list">
               <div class="tag">
                 fr
               </div>
               <div class="tag">
                 en
               </div>
-              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="profile-body-main"></div>
+      <div class="profile-body-main">
+        <h2 class="profile-body-title">
+          Models
+          <div class="count">7</div>
+        </h2>
+        <div class="profile-body-filters">
+          <input type="text" class="input-search" placeholder="Find a model...">
+          <button class="button-filter">Tags: All</button>
+          <button class="button-filter">Sort: Most Downloads</button>
+        </div>
+        <div class="repo-list">
+          <article class="repo-card">
+            <div class="repo-card-header">
+              <h3 class="repo-card-header-name">
+                bert-base-uncased
+              </h3>
+              <button class="button-star">
+                <img src="assets/star.svg" alt="A star icon">
+                Star this model
+              </button>
+            </div>
+            <div class="repo-card-desc">
+              BERT is a transformers model pretrained on a large corpus of English data in a self-supervised fashion.
+            </div>
+            <div class="tag-list">
+              <div class="tag">
+                pytorch
+              </div>
+              <div class="tag">
+                rust
+              </div>
+              <div class="tag">
+                bert
+              </div>
+            </div>
+            <div class="repo-card-details">
+              <div class="details-item">
+                <img src="assets/star_small.svg" alt="A star icon" />
+                32,000
+              </div>
+              <div class="details-item">
+                <img src="assets/arrow_down.svg" alt="A star icon" />
+                294,050,300
+              </div>
+              <div class="details-item">
+                <div class="lil-bar-tenserflow"></div>
+                Tenserflow
+              </div>
+              <div class="details-item">
+                <div class="lil-bar-tense"></div>
+                tense
+              </div>
+              <div class="details-item">
+                Updated 3 hours ago
+              </div>
+            </div>
+          </article>
+          <article class="repo-card">
+            <div class="repo-card-header">
+              <h3 class="repo-card-header-name">
+                gpt2
+              </h3>
+              <button class="button-star">
+                <img src="assets/star_filled.svg" alt="A star icon">
+                Unstar
+              </button>
+            </div>
+            <div class="repo-card-desc">
+              Pretrained model on English language using a causal language modeling (CLM) objective. It was introduced
+              in this paper and first released at this page.
+            </div>
+            <div class="tag-list">
+              <div class="tag">
+                pytorch
+              </div>
+              <div class="tag">
+                masked-lm
+              </div>
+              <div class="tag">
+                exbert
+              </div>
+            </div>
+            <div class="repo-card-details">
+              <div class="details-item">
+                <img src="assets/star_small.svg" alt="A star icon" />
+                28,000
+              </div>
+              <div class="details-item">
+                <img src="assets/arrow_down.svg" alt="A star icon" />
+                193,580,000
+              </div>
+              <div class="details-item">
+                <div class="lil-bar-tenserflow"></div>
+                Tenserflow
+              </div>
+              <div class="details-item">
+                <div class="lil-bar-tense"></div>
+                tense
+              </div>
+              <div class="details-item">
+                Updated 1 week ago
+              </div>
+            </div>
+          </article>
+          <article class="repo-card">
+            <div class="repo-card-header">
+              <h3 class="repo-card-header-name">
+                roberta-base
+              </h3>
+              <button class="button-star">
+                <img src="assets/star.svg" alt="A star icon">
+                Star this model
+              </button>
+            </div>
+            <div class="repo-card-desc">
+              Pretrained model on English language using a causal language modeling (CLM) objective.
+            </div>
+            <div class="tag-list">
+              <div class="tag">
+                masked-lm
+              </div>
+              <div class="tag">
+                rust
+              </div>
+              <div class="tag">
+                bert
+              </div>
+            </div>
+            <div class="repo-card-details">
+              <div class="details-item">
+                <img src="assets/star_small.svg" alt="A star icon" />
+                16,500
+              </div>
+              <div class="details-item">
+                <img src="assets/arrow_down.svg" alt="A star icon" />
+                132,950,000
+              </div>
+              <div class="details-item">
+                <div class="lil-bar-tense"></div>
+                tense
+              </div>
+              <div class="details-item">
+                Updated 4 days ago
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
     </div>
   </div>
 </body>

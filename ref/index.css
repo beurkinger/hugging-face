@@ -36,22 +36,30 @@ body, input, textarea, button, select {
     --color-gray-lighter: #D8D8D8;
     --color-white: #FFFFFF;
     --color-text-body: #333;
+    --color-text-link: #354ae0;
     --color-body: white;
     --color-profile-pic-background: #6A7BF3;
-    --color-main-1: #0000FF;
-    --color-main-2: #FF0000;
+    --color-tense: #6572E1;
+    --color-tenserflow: #D0548D;
+    --color-tag-text: #5737B2;
+
+    /* Gradients */
+    --gradient-profile-header: linear-gradient(-180deg, #FFFFFF 0%, #F9FAFB 100%);
+    --gradient-tag-background: linear-gradient(-180deg, #F5F4FD 0%, #EAE8FF 100%);
+
     /* Font Size */
-    --font-size-smaller: 0.75rem;
-    --font-size-small: 0.875rem;
-    --font-size-medium: 1rem;
-    --font-size-large: 1.125rem;
-    --font-size-larger: 1.375rem;
-    --font-size-largest: 2.25rem;
+    --font-size-xs: 0.75rem;
+    --font-size-s: 0.875rem;
+    --font-size-m: 1rem;
+    --font-size-l: 1.125rem;
+    --font-size-xl: 1.375rem;
+    --font-size-xxl: 1.5rem;
+    --font-size-xxxl: 2.25rem;
 
     /* Font Family */
     --font-family-black: Roboto-Black;
     --font-family-bold: Roboto;
-    --font-family-medium: Roboto-Medium;
+    --font-family-medium: Roboto, Roboto-Medium;
 
     /* Letter Spacing */
     --letter-spacing-small: 0.0125rem;
@@ -67,7 +75,7 @@ body, input, textarea, button, select {
 }
 
 /* Buttons */
-.button {
+.button, .button-filter, .button-add, .button-star, .button-header, .button-header-menu {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -77,23 +85,91 @@ body, input, textarea, button, select {
     padding: 0.5rem 0.75rem;
     background: var(--color-gray-darkest);
     color: var(--color-white);
-    font-size: var(--font-size-medium);
-    font-family: var(--font-family-bold);
-    font-weight: bold;
+    font-size: var(--font-size-s);
+    font-family: var(--font-family-medium);
     line-height: 1;
     letter-spacing: var(--letter-spacing-small);
+    text-decoration: none;
+}
+
+.button:hover, .button-filter:hover, .button-add:hover, .button-star:hover, .button-header:hover, .button-header-menu:hover {
+    cursor: pointer;
+}
+
+.button-filter::after {
+    display: inline-block;
+    margin-left: 0.5rem;
+    border-style: solid;
+    border-width: 0.315rem 0.25rem 0 0.25rem;
+    border-color: var(--color-white) transparent transparent transparent;
+    width: 0;
+    height: 0;
+    content: '';
+}
+
+.button-add {
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+    border-color: var(--color-gray-dark);
+    background: var(--color-white);
+    color: var(--color-text-body);
+    font-weight: bold;
+}
+
+.button-star {
+    border-color: transparent;
+    background: transparent;
+    padding: 0.35rem 0.45rem;
+    color: var(--color-gray-dark);
+    font-size: var(--font-size-s);
+}
+
+.button-star img {
+    width: auto;
+    height: 0.875rem;
+    margin-right: 0.5rem;
+}
+
+.button-star:hover {
+    border-color: var(--color-gray-dark);
+}
+
+
+.button-header, .button-header-menu {
+    border-color: transparent;
+    padding: 0.1rem;
+    background: transparent;
+    font-family: var(--font-family-bold);
+    color: inherit;
+    font-size: var(--font-size-m);
+    font-weight: bold;
+}
+
+.button-header-menu::after {
+    display: inline-block;
+    margin-left: 0.35rem;
+    border-style: solid;
+    border-width: 0.315rem 0.25rem 0 0.25rem;
+    border-color: var(--color-gray-darkest) transparent transparent transparent;
+    width: 0;
+    height: 0;
+    content: '';
 }
 
 .tag, .tag-big {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border: 0.0625rem solid var(--color-gray-medium);
+    /* border: 0.0625rem solid var(--color-gray-medium); */
+    border: 0.0625rem solid transparent;
     border-radius: var(--border-radius-large);
     padding: 0.25rem 0.55rem;
-    background: var(--color-gray-medium);
-    color: var(--color-white);
-    font-size: var(--font-size-small);
+    /* background: var(--color-gray-medium); */
+    background: var(--gradient-tag-background);
+    /* color: var(--color-white); */
+    color: var(--color-tag-text);
+    font-size: var(--font-size-s);
     font-family: var(--font-family-medium);
     letter-spacing: var(--letter-spacing-small);
     line-height: 1;
@@ -103,24 +179,34 @@ body, input, textarea, button, select {
     border-color: var(--color-gray-darkest);
     padding: 0.315rem 0.63rem;
     background: var(--color-gray-darkest);
+    color: var(--color-white);
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.tag-list .tag, .taglist .tag-big {
+    margin: 0 0.315rem 0.315rem 0;
+
 }
 
 /* Input */
 
-.search {
+.input-search {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border: 0.065rem solid var(--color-gray-darkest);
+    border: 0.065rem solid var(--color-gray-dark);
     border-radius: var(--border-radius-medium);    
     width: 18.75rem;
-    height: 2.125rem;
+    height: 2rem;
     padding: 0.25rem 1.125rem;
     color: var(--color-text-body);
     font-family: var(--font-family-medium);
-    font-size: var(--font-size-medium);
-
-    margin-right: 0.85rem;
+    font-size: var(--font-size-s);
 }
 
 .search::placeholder {
@@ -146,8 +232,23 @@ body, input, textarea, button, select {
     width: 1.375rem;
     height: 1.375rem;
     color: var(--color-gray-darker); 
-    font-size: var(--font-size-smaller);
+    font-size: var(--font-size-xs);
     font-family: var(--font-family-medium);
+    line-height: 1;
+}
+
+.lil-bar-tense, .lil-bar-tenserflow {
+    border-radius: var(--border-radius-medium);
+    width: 1.125rem;
+    height: 0.25rem;
+}
+
+.lil-bar-tense {
+    background: var(--color-tense);
+}
+
+.lil-bar-tenserflow {
+    background: var(--color-tenserflow);
 }
 
 /* Main Components */
@@ -155,7 +256,7 @@ body, input, textarea, button, select {
 .page {
     background: white;
     color: var(--color-text-body);
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-m);
     font-family: var(--font-family-medium);
 }
 
@@ -179,6 +280,10 @@ body, input, textarea, button, select {
     height: 100%;
 }
 
+.page-header-content-column:last-child > * {
+    margin-left: 0.85rem;
+}
+
 .page-header-logo {
     margin-right: 0.625rem;
     width: auto;
@@ -186,17 +291,18 @@ body, input, textarea, button, select {
 }
 
 .page-header-title {
-    margin-right: 1.75rem;
-    font-size: var(--font-size-larger);
+    margin-right: 1.65rem;
+    font-size: var(--font-size-xl);
     font-family: var(--font-family-black);
 }
 
-.page-header-link {
-    margin: 0.2rem 0.9rem 0 0;
-    font-family: var(--font-family-bold);
-    color: inherit;
-    text-decoration: none;
-    font-weight: bold;
+.page-header-links {
+    display: flex;
+    padding-top: 0.2rem;
+}
+
+.page-header-links a {
+    margin-right: 0.7rem;
 }
 
 .row {
@@ -208,8 +314,9 @@ body, input, textarea, button, select {
 
 .profile-header {
     border-bottom: 1px solid var(--color-gray-lighter);
-    padding: 2.25rem var(--page-margin) 2.125rem;
     width: 100%;
+    padding: 2.25rem var(--page-margin) 2.125rem;
+    /* background: var(--gradient-profile-header); */
 }
 
 .profile-card {
@@ -240,7 +347,7 @@ body, input, textarea, button, select {
 .profile-card-name {
     margin-bottom: 0.9rem;
     font-family: var(--font-family-black);
-    font-size: var(--font-size-largest);
+    font-size: var(--font-size-xxxl);
     line-height: 1;
 }
 
@@ -255,9 +362,14 @@ body, input, textarea, button, select {
 }
 
 .profile-card-details-link {
-    color: var(--color-gray-medium);
+    color: var(--color-gray-darker);
+    /* color: var(--color-text-link); */
     text-decoration: none;
-    /* letter-spacing: var(--letter-spacing-small); */
+    letter-spacing: var(--letter-spacing-small);
+}
+
+.profile-card-details-link:hover {
+    text-decoration: underline;
 }
 
 .profile-body {
@@ -266,6 +378,7 @@ body, input, textarea, button, select {
 }
 
 .profile-body-panel {
+    position: relative;
     width: 18.75rem;
     margin-right: 3.125rem; 
     padding-top: 3.125rem; 
@@ -277,24 +390,104 @@ body, input, textarea, button, select {
 
 .panel-item-title {
     display: flex;
+    align-items: center;
     margin-bottom: 0.9375rem;
     font-family: var(--font-family-black);
-    font-size: var(--font-size-large);
+    font-size: var(--font-size-l);
 }
 
-.panel-item-body {}
-
-.panel-tags {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+.panel-item-body .tag-list {
     max-width: 15.625rem;
 }
 
-.panel-tags > *{
-    margin: 0 0.315rem 0.315rem 0;
+.profile-body-main {
+    padding: 3.375rem 0;
+}
+
+.profile-body-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.375rem;
+    font-family: var(--font-family-black);
+    font-size: var(--font-size-xxl);
+}
+
+.profile-body-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 1.15rem;
+}
+
+.profile-body-filters > * {
+    margin: 0 0.85rem 0.85rem 0;
+}
+
+.repo-list {}
+
+.repo-card {
+    border-bottom: 0.0625rem solid var(--color-gray-lighter);
+    padding: 1.875rem 0;
+}
+
+.repo-card:first-child {
+    border-top: 0.0625rem solid var(--color-gray-lighter);
 
 }
 
+.repo-card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.625rem;
+}
 
-.profile-body-main {}
+.repo-card-header-name {
+    font-size: var(--font-size-xl);
+    font-family: var(--font-family-bold);
+    font-weight: bold;
+}
+
+.repo-card-header-name:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.repo-card-header button {
+    margin-left: 1.75rem;
+}
+
+.repo-card-desc {
+    margin-bottom: 0.9375rem;
+    max-width: 34rem;
+}
+
+.repo-card-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 1rem;
+}
+
+
+.details-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.15rem;
+    color: var(--color-gray-darker);
+    font-size: var(--font-size-s);
+    line-height: 1;
+}
+
+.details-item img {
+    height: 0.875rem;
+    margin-right: 0.4rem;
+}
+
+.details-item div {
+    margin-right: 0.4rem;
+}
+
+.repo-card-details  .details-item:last-child {
+    margin-left: 0.625rem;
+}
