@@ -28,7 +28,8 @@ body, input, textarea, button, select {
 :root {
     /* Color */
     --color-black: #000000;
-    --color-gray-darker: #333;
+    --color-gray-darkest: #333;
+    --color-gray-darker: #555;
     --color-gray-dark: #777;
     --color-gray-medium: #999;
     --color-gray-light: #CCC;
@@ -40,8 +41,10 @@ body, input, textarea, button, select {
     --color-main-1: #0000FF;
     --color-main-2: #FF0000;
     /* Font Size */
+    --font-size-smaller: 0.75rem;
     --font-size-small: 0.875rem;
     --font-size-medium: 1rem;
+    --font-size-large: 1.125rem;
     --font-size-larger: 1.375rem;
     --font-size-largest: 2.25rem;
 
@@ -68,11 +71,11 @@ body, input, textarea, button, select {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border: 0.0625rem solid var(--color-gray-darker);
+    border: 0.0625rem solid var(--color-gray-darkest);
     border-radius: var(--border-radius-small);
     min-width: 3.125rem;
     padding: 0.5rem 0.75rem;
-    background: var(--color-gray-darker);
+    background: var(--color-gray-darkest);
     color: var(--color-white);
     font-size: var(--font-size-medium);
     font-family: var(--font-family-bold);
@@ -81,18 +84,25 @@ body, input, textarea, button, select {
     letter-spacing: var(--letter-spacing-small);
 }
 
-.tag {
+.tag, .tag-big {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border: 0.0625rem solid var(--color-gray-darker);
+    border: 0.0625rem solid var(--color-gray-medium);
     border-radius: var(--border-radius-large);
-    padding: 0.25rem 0.63rem;
-    background: var(--color-gray-darker);
+    padding: 0.25rem 0.55rem;
+    background: var(--color-gray-medium);
     color: var(--color-white);
     font-size: var(--font-size-small);
     font-family: var(--font-family-medium);
     letter-spacing: var(--letter-spacing-small);
+    line-height: 1;
+}
+
+.tag-big { 
+    border-color: var(--color-gray-darkest);
+    padding: 0.315rem 0.63rem;
+    background: var(--color-gray-darkest);
 }
 
 /* Input */
@@ -101,7 +111,7 @@ body, input, textarea, button, select {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border: 0.065rem solid var(--color-gray-darker);
+    border: 0.065rem solid var(--color-gray-darkest);
     border-radius: var(--border-radius-medium);    
     width: 18.75rem;
     height: 2.125rem;
@@ -118,11 +128,26 @@ body, input, textarea, button, select {
 }
 
 /* Misc */
+
 .bullet {
     border-radius: 100%;
     width: 0.625rem;
     height: 0.625rem;
     background-color: var(--color-gray-light);
+}
+
+.count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1.25rem;
+    border: 0.0625rem solid var(--color-gray-darker);
+    border-radius: 100%;
+    width: 1.375rem;
+    height: 1.375rem;
+    color: var(--color-gray-darker); 
+    font-size: var(--font-size-smaller);
+    font-family: var(--font-family-medium);
 }
 
 /* Main Components */
@@ -235,4 +260,41 @@ body, input, textarea, button, select {
     /* letter-spacing: var(--letter-spacing-small); */
 }
 
-.profile-body {}
+.profile-body {
+    display: flex;
+    padding: 0 var(--page-margin);
+}
+
+.profile-body-panel {
+    width: 18.75rem;
+    margin-right: 3.125rem; 
+    padding-top: 3.125rem; 
+}
+
+.panel-item {
+    margin-bottom: 2.875rem;
+}
+
+.panel-item-title {
+    display: flex;
+    margin-bottom: 0.9375rem;
+    font-family: var(--font-family-black);
+    font-size: var(--font-size-large);
+}
+
+.panel-item-body {}
+
+.panel-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    max-width: 15.625rem;
+}
+
+.panel-tags > *{
+    margin: 0 0.315rem 0.315rem 0;
+
+}
+
+
+.profile-body-main {}
