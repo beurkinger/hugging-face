@@ -148,8 +148,33 @@
             </h2>
             <div class="profile-body-filters">
               <input type="text" class="input-search" placeholder="Find a model...">
-              <button class="button-filter">Tags: All</button>
-              <button class="button-filter">Sort: Most Downloads</button>
+              <div class="dropdown">
+                <button class="button-filter">Tags: All</button>
+                <ul class="menu menu-align-right">
+                  <li class="menu-entry menu-entry-active">All</li>
+                  <li class="menu-entry">PyTorch</li>
+                  <li class="menu-entry">Tensorflow</li>
+                  <li class="menu-entry">TF Saved Model</li>
+                  <li class="menu-entry">TF Lite</li>
+                  <li class="menu-entry">Rust Model</li>
+                  <li class="menu-entry">lm-head</li>
+                  <li class="menu-entry">text-classifictation</li>
+                  <li class="menu-entry">token-classifictation</li>
+                  <li class="menu-entry">question answering</li>
+                  <li class="menu-entry">multiple choice</li>
+                  <li class="menu-entry">you get the idea</li>
+                </ul>
+              </div>
+              <div class="dropdown">
+                <button class="button-filter">Sort: Most Downloads</button>
+                <ul class="menu menu-align-right">
+                  <li class="menu-entry menu-entry-active">Most Downloads</li>
+                  <li class="menu-entry">Alphabetical</li>
+                  <li class="menu-entry">Metrics</li>
+                  <li class="menu-entry">S3 Order</li>
+                  <li class="menu-entry">Recently Updated</li>
+                </ul>
+              </div>
             </div>
             <div class="repo-list">
               <article class="repo-card">
