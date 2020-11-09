@@ -34,6 +34,7 @@ body, input, textarea, button, select {
     --color-gray-medium: #999;
     --color-gray-light: #CCC;
     --color-gray-lighter: #D8D8D8;
+    --color-gray-lightest: #ECECEC;
     --color-white: #FFFFFF;
     --color-text-body: #333;
     --color-text-link: #354ae0;
@@ -75,7 +76,7 @@ body, input, textarea, button, select {
 }
 
 /* Buttons */
-.button, .button-filter, .button-add, .button-star, .button-header, .button-header-menu {
+.button, .button-filter, .button-add, .button-star, .button-header {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -92,7 +93,7 @@ body, input, textarea, button, select {
     text-decoration: none;
 }
 
-.button:hover, .button-filter:hover, .button-add:hover, .button-star:hover, .button-header:hover, .button-header-menu:hover {
+.button:hover, .button-filter:hover, .button-add:hover, .button-star:hover, .button-header:hover {
     cursor: pointer;
 }
 
@@ -136,7 +137,7 @@ body, input, textarea, button, select {
 }
 
 
-.button-header, .button-header-menu {
+.button-header {
     border-color: transparent;
     padding: 0.1rem;
     background: transparent;
@@ -144,17 +145,6 @@ body, input, textarea, button, select {
     color: inherit;
     font-size: var(--font-size-m);
     font-weight: bold;
-}
-
-.button-header-menu::after {
-    display: inline-block;
-    margin-left: 0.35rem;
-    border-style: solid;
-    border-width: 0.315rem 0.25rem 0 0.25rem;
-    border-color: var(--color-gray-darkest) transparent transparent transparent;
-    width: 0;
-    height: 0;
-    content: '';
 }
 
 .tag, .tag-big {
@@ -191,6 +181,52 @@ body, input, textarea, button, select {
 .tag-list .tag, .taglist .tag-big {
     margin: 0 0.315rem 0.315rem 0;
 
+}
+
+
+/* Dropdown and menu */
+.dropdown {
+    position: relative;
+    display: inline;
+}
+
+.dropdown .button-header::after {
+    display: inline-block;
+    margin-left: 0.35rem;
+    border-style: solid;
+    border-width: 0.315rem 0.25rem 0 0.25rem;
+    border-color: var(--color-gray-darkest) transparent transparent transparent;
+    width: 0;
+    height: 0;
+    content: '';
+}
+
+.menu {
+    position: absolute;
+    top: 100%;
+    left: -1rem;
+    display: block;
+    display: none;
+    border: 0.0625rem solid var(--color-gray-lighter);
+    border-radius: var(--border-radius-medium);
+    padding: 0.5rem 0;
+    background: var(--color-white);
+    list-style-type: none;
+    overflow: visible;
+    box-shadow: 0rem 0.25rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.menu-entry {
+    display: block;
+    padding: 0.5rem 1rem;
+    width: 12rem;
+    /* font-size: var(--font-size-s); */
+    color: var(--color-gray-darker);
+}
+
+.menu-entry:hover {
+    cursor: pointer;
+    background-color: var(--color-gray-lightest);
 }
 
 /* Input */
