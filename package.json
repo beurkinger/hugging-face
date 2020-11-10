@@ -8,8 +8,7 @@
     "deploy": "gh-pages -d dist --remove \"[!CNAME]*\"",
     "lint": "eslint . --ext .ts,.tsx",
     "start": "webpack-dev-server --mode development --open",
-    "type-check": "tsc --noEmit --watch",
-    "update-config": "node ./scripts/update-config.js"
+    "type-check": "tsc --noEmit --watch"
   },
   "repository": {
     "type": "git",
