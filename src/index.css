@@ -59,7 +59,7 @@ body, input, textarea, button, select {
     --color-gray-medium: #999;
     --color-gray-light: #CCC;
     --color-gray-lighter: #D8D8D8;
-    --color-gray-lightest: #ECECEC;
+    --color-gray-lightest: #EAEAEA;
     --color-white: #FFFFFF;
     --color-text-body: #333;
     --color-text-link: #3b48f6;
@@ -127,7 +127,7 @@ body, input, textarea, button, select {
     position: absolute;
     top: 0;
     transform: translateY(-50%);
-    border-color: var(--color-gray-dark);
+    border-color: var(--color-gray-light);
     background: var(--color-white);
     color: var(--color-text-body);
     font-weight: bold;
@@ -364,7 +364,7 @@ body, input, textarea, button, select {
 }
 
 .page-header {
-    border-bottom: 1px solid var(--color-gray-lighter);
+    border-bottom: 1px solid var(--color-gray-lightest);
     /* display: flex; */
     /* height: var(--page-header-height); */
     /* padding: 0 var(--page-margin); */
@@ -412,7 +412,7 @@ body, input, textarea, button, select {
 /* Profile Components */
 
 .profile-header {
-    border-bottom: 1px solid var(--color-gray-lighter);
+    border-bottom: 1px solid var(--color-gray-lightest);
     /* width: 100%; */
     /* padding: 2.25rem var(--page-margin) 2.125rem; */
     /* background: var(--gradient-profile-header); */
