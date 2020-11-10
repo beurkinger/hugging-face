@@ -475,7 +475,7 @@ body, input, textarea, button, select {
     color: var(--color-text-link);
 }
 
-.profile-body {}
+/* .profile-body {} */
 
 .profile-body-content {
     display: flex;
@@ -553,7 +553,7 @@ body, input, textarea, button, select {
     margin: 0 0.85rem 0.85rem 0;
 }
 
-.repo-list {}
+/* .repo-list {} */
 
 .repo-card {
     border-bottom: 0.0625rem solid var(--color-gray-lighter);
