@@ -2,10 +2,6 @@ const Webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const HTML_TITLE = 'Hugging Face';
-const HTML_META_TITLE = 'Hugging Face';
-const HTML_META_DESCRIPTION =
-  'A design prototype for Hugging Face.';
 const PUBLIC_PATH = {
   PROD: '/hugging-face/',
   DEV: '/',
@@ -20,7 +16,7 @@ module.exports = (_, argv) => {
       publicPath,
     },
     resolve: {
-      extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      extensions: ['.js', '.ts'],
     },
     module: {
       rules: [
@@ -35,14 +31,14 @@ module.exports = (_, argv) => {
           loader: 'source-map-loader',
         },
         {
+          test: /\.html$/i,
+          loader: 'html-loader',
+        },
+        {
           test: /\.css$/,
           use: [
             { loader: MiniCssExtractPlugin.loader },
-            '@teamsupercell/typings-for-css-modules-loader',
-            {
-              loader: 'css-loader',
-              options: { modules: true },
-            },
+            { loader: 'css-loader' },
             'postcss-loader',
           ],
         },
@@ -52,7 +48,6 @@ module.exports = (_, argv) => {
             {
               loader: 'file-loader',
               options: {
-                name: '[name].[ext]',
                 outputPath: 'assets/',
               },
             },
@@ -63,18 +58,12 @@ module.exports = (_, argv) => {
     plugins: [
       new Webpack.WatchIgnorePlugin([/css\.d\.ts$/]),
       new HtmlWebpackPlugin({
-        meta: {
-          description: HTML_META_DESCRIPTION,
-          title: HTML_META_TITLE,
-        }
         template: __dirname + '/src/index.html',
-        title: HTML_TITLE,
       }),
       new MiniCssExtractPlugin(),
     ],
     devServer: {
       contentBase: __dirname + '/public',
-      historyApiFallback: true,
       publicPath,
     },
   };

@@ -1,13 +1,431 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <noscript>If you're seeing this message, that means <strong>JavaScript has been disabled on your browser</strong>, please <strong>enable JS</strong> to make this app work.</noscript>
-    <div id="root"></div>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hugging Face - Models</title>
+</head>
+
+<body>
+  <noscript>
+    If you're seeing this message, that means <strong>JavaScript has been disabled on your browser</strong>,
+    please <strong>enable JS</strong> to make this app work.
+  </noscript>
+  <div class="page">
+    <div class="page-header">
+      <div class="container">
+        <div class="page-header-content">
+          <div class="page-header-content-column">
+            <img class="page-header-logo" src="./assets/huggingface_logo.svg" alt="The Hugging Face company logo" />
+            <h3 class="page-header-title">HuggingFace</h3>
+            <nav class="page-header-links">
+              <a class="button button-header" href="#">🚀 Models</a>
+              <div class="dropdown">
+                <button class="button button-header" href="#">Explore</button>
+                <ul class="menu">
+                  <li class="menu-entry">Models</li>
+                  <li class="menu-entry">Datasets</li>
+                  <li class="menu-entry">Metrics</li>
+                  <li class="menu-entry">Languages</li>
+                  <li class="menu-entry">Organizations</li>
+                </ul>
+              </div>
+              <div class="dropdown">
+                <button class="button button-header" href="#">Help</button>
+                <ul class="menu">
+                  <li class="menu-entry">Model Hub</li>
+                  <li class="menu-entry">Inference API</li>
+                  <li class="menu-entry">Transformers API</li>
+                  <li class="menu-entry">Tokenizers</li>
+                  <li class="menu-entry">Datasets</li>
+                </ul>
+              </div>
+              <a class="button button-header" href="#">Prices</a>
+            </nav>
+          </div>
+          <div class="page-header-content-column">
+            <input type="text" class="input-search" placeholder="Search models, datasets, users..." />
+            <button class="button">Sign In</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="profile-header">
+      <div class="container">
+        <div class="profile-header-content">
+          <div class="profile-card">
+            <div>
+              <div class="profile-card-pic">
+                <img src="assets/huggingface_logo.svg" alt="Hugging Face's profile picture" />
+              </div>
+            </div>
+            <div>
+              <h1 class="profile-card-name">Hugging Face</h1>
+              <div class="profile-card-details">
+                <div>
+                  <div class="tag-big">Company</div>
+                </div>
+                <div>
+                  <div class="bullet"></div>
+                </div>
+                <div>
+                  <a class="profile-card-details-link" href="#">https://huggingface.com</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="profile-body">
+      <div class="container">
+        <div class="profile-body-content">
+          <div class="profile-body-content-panel">
+            <div class="button button-add">+ Request To Join</div>
+            <div class="panel-item">
+              <h4 class="panel-item-title">
+                Research Interests
+              </h4>
+              <div class="panel-item-body">
+                Solving NLP, one commit at a time.
+              </div>
+            </div>
+            <div class="panel-item">
+              <h4 class="panel-item-title">
+                Team Members
+                <div class="count">20</div>
+              </h4>
+              <div class="panel-item-body">
+                <div class=profile-icon-list>
+                  <img class="profile-icon" src="./assets/p00000.jpg" alt="A profile picture" />
+                  <img class="profile-icon" src="./assets/p00001.jpg" alt="A profile picture" />
+                  <img class="profile-icon" src="./assets/p00002.jpg" alt="A profile picture" />
+                  <img class="profile-icon" src="./assets/p00003.png" alt="A profile picture" />
+                  <img class="profile-icon" src="./assets/p00004.jpg" alt="A profile picture" />
+                  <img class="profile-icon" src="./assets/p00005.jpg" alt="A profile picture" />
+                  <img class="profile-icon" src="./assets/p00006.png" alt="A profile picture" />
+                  <img class="profile-icon" src="./assets/p00007.jpg" alt="A profile picture" />
+                  <img class="profile-icon" src="./assets/p00008.jpg" alt="A profile picture" />
+                  <img class="profile-icon" src="./assets/p00009.jpg" alt="A profile picture" />
+                  <img class="profile-icon" src="./assets/p00010.jpg" alt="A profile picture" />
+                  <img class="profile-icon" src="./assets/p00011.jpg" alt="A profile picture" />
+                  <img class="profile-icon" src="./assets/p00012.jpg" alt="A profile picture" />
+                  <img class="profile-icon" src="./assets/p00013.jpg" alt="A profile picture" />
+                  <img class="profile-icon" src="./assets/p00014.jpg" alt="A profile picture" />
+                  <img class="profile-icon" src="./assets/p00015.jpg" alt="A profile picture" />
+                  <img class="profile-icon" src="./assets/p00016.png" alt="A profile picture" />
+                  <img class="profile-icon" src="./assets/p00017.jpg" alt="A profile picture" />
+                  <img class="profile-icon" src="./assets/p00018.png" alt="A profile picture" />
+                  <img class="profile-icon" src="./assets/p00019.png" alt="A profile picture" />
+                </div>
+              </div>
+            </div>
+            <div class="panel-item">
+              <h4 class="panel-item-title">
+                Most Used Tags
+              </h4>
+              <div class="panel-item-body">
+                <div class="tag-list">
+                  <div class="tag">
+                    pytorch
+                  </div>
+                  <div class="tag">
+                    rust
+                  </div>
+                  <div class="tag">
+                    bert
+                  </div>
+                  <div class="tag">
+                    nasked-lm
+                  </div>
+                  <div class="tag">
+                    exbert
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel-item">
+              <h4 class="panel-item-title">
+                Available Languages
+              </h4>
+              <div class="panel-item-body">
+                <div class="tag-list">
+                  <div class="tag">
+                    fr
+                  </div>
+                  <div class="tag">
+                    en
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="profile-body-content-main">
+            <h2 class="profile-body-title">
+              Models
+              <div class="count">7</div>
+            </h2>
+            <div class="profile-body-filters">
+              <input type="text" class="input-search" placeholder="Find a model...">
+              <div class="dropdown">
+                <button class="button">Tags: All</button>
+                <ul class="menu menu-filter">
+                  <li class="menu-entry menu-entry-active">
+                    <svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+                      <path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+                    </svg>
+                    All
+                  </li>
+                  <li class="menu-entry">
+                    <svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+                      <path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+                    </svg>
+                    PyTorch
+                  </li>
+                  <li class="menu-entry">
+                    <svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+                      <path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+                    </svg>
+                    Tensorflow
+                  </li>
+                  <li class="menu-entry">
+                    <svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+                      <path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+                    </svg>
+                    TF Saved Model
+                  </li>
+                  <li class="menu-entry">
+                    <svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+                      <path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+                    </svg>
+                    TF Lite
+                  </li>
+                  <li class="menu-entry">
+                    <svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+                      <path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+                    </svg>
+                    Rust Model
+                  </li>
+                  <li class="menu-entry">
+                    <svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+                      <path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+                    </svg>
+                    lm-head
+                  </li>
+                  <li class="menu-entry">
+                    <svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+                      <path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+                    </svg>
+                    text-classifictation
+                  </li>
+                  <li class="menu-entry">
+                    <svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+                      <path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+                    </svg>
+                    token-classifictation
+                  </li>
+                  <li class="menu-entry">
+                    <svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+                      <path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+                    </svg>
+                    question answering
+                  </li>
+                  <li class="menu-entry">
+                    <svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+                      <path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+                    </svg>
+                    multiple choice
+                  </li>
+                  <li class="menu-entry">
+                    <svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+                      <path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+                    </svg>
+                    you get the idea
+                  </li>
+                </ul>
+              </div>
+              <div class="dropdown">
+                <button class="button">Sort: Most Downloads</button>
+                <ul class="menu menu-filter">
+                  <li class="menu-entry menu-entry-active">
+                    <svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+                      <path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+                    </svg>
+                    Most Downloads
+                  </li>
+                  <li class="menu-entry">
+                    <svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+                      <path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+                    </svg>
+                    Alphabetical
+                  </li>
+                  <li class="menu-entry">
+                    <svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+                      <path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+                    </svg>
+                    Metrics
+                  </li>
+                  <li class="menu-entry">
+                    <svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+                      <path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+                    </svg>
+                    S3 Order
+                  </li>
+                  <li class="menu-entry">
+                    <svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+                      <path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+                    </svg>
+                    Recently Updated
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="repo-list">
+              <article class="repo-card">
+                <div class="repo-card-header">
+                  <h3 class="repo-card-header-name">
+                    bert-base-uncased
+                  </h3>
+                  <button class="button button-star">
+                    <img src="assets/star.svg" alt="A star icon">
+                    Star this model
+                  </button>
+                </div>
+                <div class="repo-card-desc">
+                  BERT is a transformers model pretrained on a large corpus of English data in a self-supervised
+                  fashion.
+                </div>
+                <div class="tag-list">
+                  <div class="tag">
+                    pytorch
+                  </div>
+                  <div class="tag">
+                    rust
+                  </div>
+                  <div class="tag">
+                    bert
+                  </div>
+                </div>
+                <div class="repo-card-details">
+                  <div class="details-item">
+                    <img src="assets/star_small.svg" alt="A star icon" />
+                    32,000
+                  </div>
+                  <div class="details-item">
+                    <img src="assets/arrow_down.svg" alt="A star icon" />
+                    294,050,300
+                  </div>
+                  <div class="details-item">
+                    <div class="lil-bar-tenserflow"></div>
+                    Tenserflow
+                  </div>
+                  <div class="details-item">
+                    <div class="lil-bar-tense"></div>
+                    tense
+                  </div>
+                  <div class="details-item">
+                    Updated 3 hours ago
+                  </div>
+                </div>
+              </article>
+              <article class="repo-card">
+                <div class="repo-card-header">
+                  <h3 class="repo-card-header-name">
+                    gpt2
+                  </h3>
+                  <button class="button-star">
+                    <img src="assets/star_filled.svg" alt="A star icon">
+                    Unstar
+                  </button>
+                </div>
+                <div class="repo-card-desc">
+                  Pretrained model on English language using a causal language modeling (CLM) objective. It was
+                  introduced
+                  in this paper and first released at this page.
+                </div>
+                <div class="tag-list">
+                  <div class="tag">
+                    pytorch
+                  </div>
+                  <div class="tag">
+                    masked-lm
+                  </div>
+                  <div class="tag">
+                    exbert
+                  </div>
+                </div>
+                <div class="repo-card-details">
+                  <div class="details-item">
+                    <img src="assets/star_small.svg" alt="A star icon" />
+                    28,000
+                  </div>
+                  <div class="details-item">
+                    <img src="assets/arrow_down.svg" alt="A star icon" />
+                    193,580,000
+                  </div>
+                  <div class="details-item">
+                    <div class="lil-bar-tenserflow"></div>
+                    Tenserflow
+                  </div>
+                  <div class="details-item">
+                    <div class="lil-bar-tense"></div>
+                    tense
+                  </div>
+                  <div class="details-item">
+                    Updated 1 week ago
+                  </div>
+                </div>
+              </article>
+              <article class="repo-card">
+                <div class="repo-card-header">
+                  <h3 class="repo-card-header-name">
+                    roberta-base
+                  </h3>
+                  <button class="button-star">
+                    <img src="assets/star.svg" alt="A star icon">
+                    Star this model
+                  </button>
+                </div>
+                <div class="repo-card-desc">
+                  Pretrained model on English language using a causal language modeling (CLM) objective.
+                </div>
+                <div class="tag-list">
+                  <div class="tag">
+                    masked-lm
+                  </div>
+                  <div class="tag">
+                    rust
+                  </div>
+                  <div class="tag">
+                    bert
+                  </div>
+                </div>
+                <div class="repo-card-details">
+                  <div class="details-item">
+                    <img src="assets/star_small.svg" alt="A star icon" />
+                    16,500
+                  </div>
+                  <div class="details-item">
+                    <img src="assets/arrow_down.svg" alt="A star icon" />
+                    132,950,000
+                  </div>
+                  <div class="details-item">
+                    <div class="lil-bar-tense"></div>
+                    tense
+                  </div>
+                  <div class="details-item">
+                    Updated 4 days ago
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
