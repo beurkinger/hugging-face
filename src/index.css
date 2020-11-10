@@ -1,3 +1,26 @@
+/* Fonts */
+
+@font-face {
+    font-family: "Roboto";
+    src: url("./assets/fonts/roboto-400.woff2") format("woff2"), url("./assets/fonts/roboto-400.woff") format("woff");
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("./assets/fonts/roboto-700.woff2") format("woff2"), url("./assets/fonts/roboto-700.woff") format("woff");
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("./assets/fonts/roboto-900.woff2") format("woff2"), url("./assets/fonts/roboto-900.woff") format("woff");
+    font-weight: 900;
+    font-display: swap;
+}
+
 /* CSS Reset */
 
 * {
@@ -16,6 +39,8 @@ html {
 }
 
 body {
+    font-family: Roboto;
+    font-weight: 400;
     font-size: 1rem;
 }
 
@@ -55,9 +80,11 @@ body, input, textarea, button, select {
     --font-size-xxl: 1.5rem;
     --font-size-xxxl: 2.25rem;
     /* Font Family */
-    --font-family-black: Roboto-Black;
-    --font-family-bold: Roboto;
-    --font-family-medium: Roboto, Roboto-Medium;
+    --font-family-main: Roboto;
+    /* Font Weights*/
+    --font-weight-regular: 500;
+    --font-weight-bold: 700;
+    --font-weight-black: 900;
     /* Letter Spacing */
     --letter-spacing-small: 0.0125rem;
     /* Border Radius */
@@ -82,7 +109,7 @@ body, input, textarea, button, select {
     background: var(--color-gray-darkest);
     color: var(--color-white);
     font-size: var(--font-size-s);
-    font-family: var(--font-family-medium);
+    font-weight: var(--font-weight-regular);
     line-height: 1;
     letter-spacing: var(--letter-spacing-small);
     text-decoration: none;
@@ -128,10 +155,9 @@ body, input, textarea, button, select {
     border-color: transparent;
     padding: 0.45rem 0.7rem;
     background: transparent;
-    font-family: var(--font-family-bold);
-    color: inherit;
+    font-weight: var(--font-weight-bold);
     font-size: var(--font-size-m);
-    font-weight: bold;
+    color: inherit;
 }
 
 .button-header:hover {
@@ -151,7 +177,6 @@ body, input, textarea, button, select {
     /* color: var(--color-white); */
     color: var(--color-tag-text);
     font-size: var(--font-size-s);
-    font-family: var(--font-family-medium);
     letter-spacing: var(--letter-spacing-small);
     line-height: 1;
 }
@@ -274,7 +299,7 @@ body, input, textarea, button, select {
     height: 2rem;
     padding: 0.25rem 1.125rem;
     color: var(--color-text-body);
-    font-family: var(--font-family-medium);
+    font-weight: var(--font-weight-regular);
     font-size: var(--font-size-s);
 }
 
@@ -310,7 +335,7 @@ body, input, textarea, button, select {
     height: 1.375rem;
     color: var(--color-gray-darker);
     font-size: var(--font-size-xs);
-    font-family: var(--font-family-medium);
+    font-weight: var(--font-weight-regular);
     line-height: 1;
 }
 
@@ -334,7 +359,8 @@ body, input, textarea, button, select {
     background: white;
     color: var(--color-text-body);
     font-size: var(--font-size-m);
-    font-family: var(--font-family-medium);
+    font-family: var(--font-family-main);
+    font-weight: var(--font-weight-regular);
 }
 
 .page-header {
@@ -370,7 +396,7 @@ body, input, textarea, button, select {
 .page-header-title {
     margin-right: 1.3rem;
     font-size: var(--font-size-xl);
-    font-family: var(--font-family-black);
+    font-weight: var(--font-weight-black);
 }
 
 .page-header-links {
@@ -423,7 +449,7 @@ body, input, textarea, button, select {
 
 .profile-card-name {
     margin-bottom: 0.9rem;
-    font-family: var(--font-family-black);
+    font-weight: var(--font-weight-black);
     font-size: var(--font-size-xxxl);
     line-height: 1;
 }
@@ -471,8 +497,7 @@ body, input, textarea, button, select {
     display: flex;
     align-items: center;
     margin-bottom: 0.9375rem;
-    font-family: var(--font-family-bold);
-    font-weight: bold;
+    font-weight: var(--font-weight-bold);
     font-size: var(--font-size-l);
 }
 
@@ -500,7 +525,6 @@ body, input, textarea, button, select {
     line-height: 0;
 }
 
-
 .panel-item-body .tag-list {
     max-width: 15.625rem;
 }
@@ -514,7 +538,7 @@ body, input, textarea, button, select {
     display: flex;
     align-items: center;
     margin-bottom: 1.375rem;
-    font-family: var(--font-family-black);
+    font-weight: var(--font-weight-black);
     font-size: var(--font-size-xxl);
 }
 
@@ -525,7 +549,7 @@ body, input, textarea, button, select {
     margin-bottom: 1.15rem;
 }
 
-.profile-body-filters > * {
+.profile-body-filters>* {
     margin: 0 0.85rem 0.85rem 0;
 }
 
@@ -548,8 +572,7 @@ body, input, textarea, button, select {
 
 .repo-card-header-name {
     font-size: var(--font-size-xl);
-    font-family: var(--font-family-bold);
-    font-weight: bold;
+    font-weight: var(--font-weight-bold);
 }
 
 .repo-card-header-name:hover {
